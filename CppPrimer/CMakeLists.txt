@@ -3,7 +3,11 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-# 将源添加到此项目的可执行文件。
-add_executable (CppPrimer "CppPrimer.cpp" "CppPrimer.h")
+file( GLOB APP_SOURCES *.cpp )
+foreach( testsourcefile ${APP_SOURCES} )
+    # I used a simple string replace, to cut off .cpp.
+    get_filename_component(testname ${testsourcefile} NAME_WE)
+    add_executable( ${testname} ${testsourcefile} )
+endforeach( testsourcefile ${APP_SOURCES} )
 
 # TODO: 如有需要，请添加测试并安装目标。
