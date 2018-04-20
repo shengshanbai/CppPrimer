@@ -4,6 +4,8 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("CppPrimer")
+set(CMAKE_CXX_STANDARD 14)
 
 # 包含子项目。
 add_subdirectory ("CppPrimer")
+add_subdirectory ("bookstore")
