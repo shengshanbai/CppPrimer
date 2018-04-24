@@ -9,3 +9,4 @@ set(CMAKE_CXX_STANDARD 14)
 # 包含子项目。
 add_subdirectory ("CppPrimer")
 add_subdirectory ("bookstore")
+add_subdirectory ("test")
